@@ -1,0 +1,32 @@
+<h1 style="text-align: center;">Minhas Listas</h1>
+
+<div style="text-align: center; margin-bottom: 20px;">
+  <%= link_to 'Nova Lista', new_list_path, class: 'btn-new-list' %>
+</div>
+
+<div class="cards-container">
+  <% @lists.each do |list| %>
+    <div class="card">
+      <h2><%= list.name %></h2>
+
+      <ul>
+        <% list.tasks.each do |task| %>
+          <li>
+            <%= task.name %>
+            <%= button_to 'Remover Tarefa', list_task_path(list, task), method: :delete, class: 'btn-delete' %>
+          </li>
+        <% end %>
+      </ul>
+
+      <%= form_with model: [list, Task.new], local: true, class: 'task-form' do |form| %>
+        <div>
+          <%= form.text_field :name, placeholder: 'Nova Tarefa', class: 'input-task' %>
+          <%= form.submit 'Adicionar', class: 'btn-add-task' %>
+        </div>
+      <% end %>
+
+      <%= button_to 'Remover Lista', list_path(list), method: :delete, data: { confirm: 'Você tem certeza que deseja remover esta lista?' }, class: 'btn-delete-list' %>
+    </div>
+  <% end %>
+</div>
+

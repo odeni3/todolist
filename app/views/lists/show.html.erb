@@ -1,0 +1,23 @@
+<h1><%= @list.name %></h1>
+
+<%= form_with model: [@list, Task.new], local: true do |form| %>
+  <div>
+    <%= form.label :name, 'Nova Tarefa' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit 'Adicionar Tarefa' %>
+  </div>
+<% end %>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.name %> - 
+      <%= button_to 'Remover', list_task_path(@list, task), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Voltar', lists_path %>

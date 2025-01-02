@@ -1,0 +1,141 @@
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #003c8a, #4c00ff); /* Degradê do fundo */
+    margin: 0;
+    padding: 30px;
+}
+
+/* Botões */
+.btn-new-list {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #00ffea, #0099ff); /* Degradê para o botão */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-new-list:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db); /* Degradê no hover */
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #e74c3c, #f44336); /* Degradê para o botão */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background: linear-gradient(135deg, #c0392b, #d32f2f); /* Degradê no hover */
+}
+
+.btn-add-task {
+    background: linear-gradient(135deg, #00ffea, #0099ff); /* Degradê para o botão */
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-task:hover {
+    background: linear-gradient(135deg, #2980b9, #3498db); /* Degradê no hover */
+}
+
+/* Cards */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.65); /* Fundo branco com 85% de opacidade */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.card li:last-child {
+    border-bottom: none;
+}
+
+/* Formulário */
+.task-form {
+    margin-top: 10px;
+}
+
+.input-task {
+    width: calc(100% - 110px);
+    padding: 8px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-task:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.btn-delete-list {
+    background: linear-gradient(135deg, #e74c3c, #f44336); /* Degradê para o botão de remover lista */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete-list:hover {
+    background: linear-gradient(135deg, #c0392b, #d32f2f); /* Degradê no hover */
+}
+.checkbox-task {
+    margin-right: 10px;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
