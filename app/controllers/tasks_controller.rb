@@ -2,7 +2,10 @@ class TasksController < ApplicationController
   def create
     @list = List.find(params[:list_id])
     @task = @list.tasks.build(task_params)
-    if @task.save
+
+    if @task.name.blank?  # Verifica se o nome está vazio
+      redirect_to list_path(@list)  # Redireciona de volta para a lista sem fazer nada
+    elsif @task.save
       redirect_to list_path(@list)
     else
       render 'lists/show'

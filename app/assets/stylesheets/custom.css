@@ -1,16 +1,14 @@
 /* Estilos Globais */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #003c8a, #4c00ff); /* Degradê do fundo */
-    margin: 0;
-    padding: 30px;
+    background: linear-gradient(60deg, #4c037de0, #f98348);
 }
 
 /* Botões */
 .btn-new-list {
     padding: 10px 20px;
-    background: linear-gradient(135deg, #00ffea, #0099ff); /* Degradê para o botão */
-    color: rgb(0, 0, 0);
+    background: linear-gradient(135deg, #5d0498, #5d0498); /* Degradê para o botão */
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     text-decoration: none;
@@ -20,7 +18,7 @@ body {
 }
 
 .btn-new-list:hover {
-    background: linear-gradient(135deg, #2980b9, #3498db); /* Degradê no hover */
+    background: linear-gradient(135deg, #4a0277, #4a0277); /* Degradê no hover */
 }
 
 .btn-delete {
@@ -38,8 +36,8 @@ body {
 }
 
 .btn-add-task {
-    background: linear-gradient(135deg, #00ffea, #0099ff); /* Degradê para o botão */
-    color: rgb(0, 0, 0);
+    background: linear-gradient(135deg, #5d0498, #5d0498); /* Degradê para o botão */
+    color: rgb(255, 255, 255);
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -48,7 +46,7 @@ body {
 }
 
 .btn-add-task:hover {
-    background: linear-gradient(135deg, #2980b9, #3498db); /* Degradê no hover */
+    background: linear-gradient(135deg, #4a0277, #4a0277); /* Degradê no hover */
 }
 
 /* Cards */
@@ -138,4 +136,349 @@ body {
     text-decoration: line-through;
     color: gray;
   }
+
+/* Estilos Específicos para o Formulário de Criação de Lista */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    color: #5d0498;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #5d0498;
+    outline: none;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #5d0498;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #4a0277;
+}
+
+.btn-secondary {
+    background: #f26d3c;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #d5552b;
+}
+
+/* Página: Adicionar Tarefas */
+.add-task-page .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.add-task-page .title {
+    font-size: 24px;
+    color: #5d0498;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.add-task-page .task-form {
+    margin-bottom: 20px;
+}
+
+.add-task-page .form-group {
+    margin-bottom: 15px;
+}
+
+.add-task-page .form-label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.add-task-page .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.add-task-page .form-input:focus {
+    border-color: #5d0498;
+    outline: none;
+}
+
+.add-task-page .task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.add-task-page .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+    color: #333;
+}
+
+.add-task-page .task-item:last-child {
+    border-bottom: none;
+}
+
+.add-task-page .task-name {
+    flex: 1;
+    color: #5d0498;
+    font-weight: bold;
+}
+
+.add-task-page .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+}
+
+.add-task-page .btn-primary {
+    background: linear-gradient(135deg, #5d0498, #8e44ad);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-page .btn-primary:hover {
+    background: linear-gradient(135deg, #4a0277, #6a3d91);
+}
+
+.add-task-page .btn-secondary {
+    background: linear-gradient(135deg, #f26d3c, #e74c3c);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-page .btn-secondary:hover {
+    background: linear-gradient(135deg, #d5552b, #c0392b);
+}
+
+.add-task-page .btn-delete {
+    background: linear-gradient(135deg, #e74c3c, #f44336);
+    color: #fff;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-page .btn-delete:hover {
+    background: linear-gradient(135deg, #c0392b, #d32f2f);
+}
+
+/* Estilos globais */
+.page-container {
+    padding: 50px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(60, #4c037de0, #f98348);
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-new-list {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #5d0498, #8e44ad);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-new-list:hover {
+    background: linear-gradient(135deg, #4a0277, #4a0277);
+}
+
+/* Cartões */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Tarefas */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-name {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Formulários */
+.task-form {
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.form-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.btn-add-task {
+    padding: 8px 12px;
+    background: linear-gradient(135deg, #002fff, #052acf);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-task:hover {
+    background: linear-gradient(135deg, #020f86, #020f86);
+}
+
+/* Botões de exclusão */
+.btn-delete, .btn-delete-list {
+    background: linear-gradient(135deg, #e74c3c, #f44336);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover, .btn-delete-list:hover {
+    background: linear-gradient(135deg, #5a0f07, #5a0f07);
+}
+
+/* Centraliza a logo na parte inferior da página */
+.logo-container {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a centralização */
+    text-align: center;
+    z-index: 1000; /* Garante que a logo fique visível em cima de outros elementos */
+  }
   
+  .v360-logo {
+    max-width: 600px; /* Ajuste o tamanho da logo */
+    height: auto;
+  }
