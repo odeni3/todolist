@@ -1,7 +1,7 @@
 /* Estilos Globais */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(60deg, #4c037de0, #f98348);
+    background: linear-gradient(90deg, #4c037de0, #f98348);
 }
 
 
@@ -76,7 +76,7 @@ body {
 .card h2 {
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #333;
 }
 
@@ -326,12 +326,6 @@ body {
     background: linear-gradient(135deg, #c0392b, #d32f2f);
 }
 
-/* Estilos globais */
-.page-container {
-    padding: 50px;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(60deg, #4c037de0, #f98348);
-}
 
 .page-title {
     text-align: center;
@@ -362,22 +356,28 @@ body {
     background: linear-gradient(135deg, #4a0277, #4a0277);
 }
 
-/* Cartões */
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
+/* Cartão individual */
+/* Cartão individual */
 .card {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    width: 100%; /* Permite que o card ocupe 100% da largura disponível */
+    max-width: 350px; /* Define uma largura máxima para os cards */
+    min-width: 250px; /* Define uma largura mínima para os cards */
+}
+
+/* Cartões responsivos */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 .card:hover {
@@ -385,39 +385,51 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Título do cartão */
 .card-title {
     font-size: 1.5em;
     color: #333;
     margin-bottom: 15px;
 }
 
-/* Tarefas */
+/* Lista de tarefas */
 .task-list {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
+    padding-left: 0;
     margin-bottom: 15px;
 }
 
+/* Item da tarefa */
 .task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.task-item:last-child {
-    border-bottom: none;
+    margin-bottom: 15px;
 }
 
 .task-name {
     font-size: 1em;
-    color: #555;
+    font-weight: bold;
+    color: #333;
 }
 
-/* Formulários */
+/* Descrição da tarefa */
+.task-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Data de validade da tarefa */
+.task-due-date {
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Formulário para adicionar tarefas */
 .task-form {
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
 }
 
 .form-group {
@@ -480,6 +492,6 @@ body {
   }
   
   .v360-logo {
-    max-width: 600px; /* Ajuste o tamanho da logo */
+    max-width: 400px; /* Ajuste o tamanho da logo */
     height: auto;
   }

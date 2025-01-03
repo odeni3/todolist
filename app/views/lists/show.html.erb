@@ -11,6 +11,10 @@
       <%= form.label :description, 'Descrição', class: 'form-label' %>
       <%= form.text_area :description, class: 'form-input' %>
     </div>
+    <div class="form-group">
+      <%= form.label :due_date, 'Data de Validade', class: 'form-label' %>
+      <%= form.date_field :due_date, class: 'form-input' %>
+    </div>
     <div>
       <%= form.submit 'Adicionar Tarefa', class: 'btn btn-primary' %>
     </div>
@@ -20,8 +24,9 @@
   <ul class="task-list">
     <% @tasks.each do |task| %>
       <li class="task-item">
-        <span class="task-name"><%= task.name %></span>
-        <p class="task-description"><%= task.description.present? ? task.description : "Sem descrição" %></p>
+        <p><strong>Título: <%= task.name %></strong></p>
+        <p><strong>Descrição:</strong> <%= task.description.present? ? task.description : "Sem descrição" %></p>
+        <p><strong>Prazo:</strong> <%= task.due_date.present? ? task.due_date.strftime('%d/%m/%Y') : "Sem data de validade" %></p>
         <%= button_to 'Remover', list_task_path(@list, task), method: :delete, class: 'btn btn-delete' %>
       </li>
     <% end %>

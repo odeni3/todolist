@@ -19,7 +19,8 @@
             <li class="task-item">
               <h3 class="task-name"><%= task.name %></h3>
               <!-- Exibe a descrição da tarefa, ou uma mensagem caso não tenha descrição -->
-              <p class="task-description"><%= task.description.present? ? task.description : "Sem descrição" %></p>
+              <!-- <p class="task-description"><%= task.description.present? ? task.description : "Sem descrição" %></p> -->
+              <p><strong></strong> <%= task.due_date %></p>
               <!-- <%= button_to 'Remover Tarefa', list_task_path(list, task), method: :delete, class: 'btn btn-delete' %> -->
             </li>
           <% end %>
