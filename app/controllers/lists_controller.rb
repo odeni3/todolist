@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
   def index
-    @lists = List.all
+    @lists = List.includes(:tasks).all  # Isso carrega todas as listas e suas tarefas associadas
   end
 
   def show

@@ -4,6 +4,7 @@ body {
     background: linear-gradient(60deg, #4c037de0, #f98348);
 }
 
+
 /* Botões */
 .btn-new-list {
     padding: 10px 20px;
@@ -329,7 +330,7 @@ body {
 .page-container {
     padding: 50px;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(60, #4c037de0, #f98348);
+    background: linear-gradient(60deg, #4c037de0, #f98348);
 }
 
 .page-title {

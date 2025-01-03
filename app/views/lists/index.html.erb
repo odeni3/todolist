@@ -17,8 +17,10 @@
         <ul class="task-list">
           <% list.tasks.each do |task| %>
             <li class="task-item">
-              <span class="task-name"><%= task.name %></span>
-              <%= button_to 'Remover Tarefa', list_task_path(list, task), method: :delete, class: 'btn btn-delete' %>
+              <h3 class="task-name"><%= task.name %></h3>
+              <!-- Exibe a descrição da tarefa, ou uma mensagem caso não tenha descrição -->
+              <p class="task-description"><%= task.description.present? ? task.description : "Sem descrição" %></p>
+              <!-- <%= button_to 'Remover Tarefa', list_task_path(list, task), method: :delete, class: 'btn btn-delete' %> -->
             </li>
           <% end %>
         </ul>
@@ -26,8 +28,8 @@
         <!-- Formulário para adicionar tarefas -->
         <%= form_with model: [list, Task.new], local: true, html: { class: 'task-form' } do |form| %>
           <div class="form-group">
-            <%= form.text_field :name, placeholder: 'Nova Tarefa', class: 'form-input' %>
-            <%= form.submit 'Adicionar', class: 'btn btn-add-task' %>
+            <%= form.hidden_field :name, placeholder: 'Nova Tarefa', class: 'form-input' %>
+            <%= form.submit 'Editar Lista', class: 'btn btn-add-task' %>
           </div>
         <% end %>
 
@@ -36,8 +38,8 @@
       </div>
     <% end %>
   </div>
+
   <div class="logo-container">
     <img src="<%= asset_path('logov360.png') %>" alt="Logo V360" class="v360-logo">
   </div>
 </div>
-
