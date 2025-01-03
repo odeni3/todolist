@@ -2,6 +2,9 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(90deg, #4c037de0, #f98348);
+    margin-left:0;
+    margin-right:0;
+    margin-top: 0;
 }
 
 
@@ -494,4 +497,22 @@ body {
   .v360-logo {
     max-width: 400px; /* Ajuste o tamanho da logo */
     height: auto;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    border-bottom: 2px solid #ccc; /* Linha divisória */
+  }
+  
+  .header-logo img {
+    max-height: 50px;
+  }
+  
+  .header-title h1 {
+    font-size: 30px;
+    color: #333;
+    margin: 0;
   }
